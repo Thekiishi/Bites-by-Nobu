@@ -34,7 +34,7 @@ body {
   overflow-x: hidden;
 }
 
-/* ── CUSTOM CURSOR ── */
+/* CUSTOM CURSOR */
 .cursor {
   position: fixed;
   width: 10px; height: 10px;
@@ -57,7 +57,7 @@ body {
   opacity: 0.5;
 }
 
-/* ── NAV ── */
+/* NAV */
 nav {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -98,7 +98,7 @@ nav.scrolled {
 }
 .nav-links a:hover { color: var(--terra-soft); }
 
-/* ── HERO ── */
+/* HERO */
 .hero {
   height: 100vh;
   min-height: 700px;
@@ -110,7 +110,6 @@ nav.scrolled {
   overflow: hidden;
 }
 
-/* Grain overlay */
 .hero::before {
   content: '';
   position: absolute;
@@ -121,7 +120,6 @@ nav.scrolled {
   z-index: 1;
 }
 
-/* Terracotta glow */
 .hero::after {
   content: '';
   position: absolute;
@@ -244,7 +242,7 @@ nav.scrolled {
   animation: scrollPulse 2s ease-in-out infinite;
 }
 
-/* ── DIVIDER ── */
+/* DIVIDER */
 .divider {
   display: flex;
   align-items: center;
@@ -265,8 +263,10 @@ nav.scrolled {
   flex-shrink: 0;
 }
 
-/* ── SECTIONS ── */
+/* SECTIONS */
 section { padding: 100px 48px; }
+.dishes-section { padding-bottom: 40px; }
+.portfolio-section { padding-top: 40px; }
 
 .section-label {
   font-size: 0.66rem;
@@ -288,7 +288,7 @@ section { padding: 100px 48px; }
 
 .section-heading em { font-style: italic; color: var(--terra); }
 
-/* ── ABOUT ── */
+/* ABOUT */
 .about {
   background: var(--white);
   max-width: 1200px;
@@ -298,8 +298,6 @@ section { padding: 100px 48px; }
   gap: 80px;
   align-items: center;
 }
-
-.about-text-col { }
 
 .about-text {
   font-size: 1.05rem;
@@ -364,33 +362,10 @@ section { padding: 100px 48px; }
   aspect-ratio: 4/5;
   background: var(--espresso);
   overflow: hidden;
+  min-height: 300px;
 }
 
 .about-img-frame::before { content: none; }
-
-.about-img-placeholder {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
-  color: rgba(253,250,246,0.4);
-}
-
-.about-img-placeholder svg {
-  width: 56px; height: 56px;
-  stroke: rgba(253,250,246,0.3);
-  fill: none;
-  stroke-width: 1;
-}
-
-.about-img-placeholder span {
-  font-size: 0.7rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-}
 
 .about-frame-accent {
   position: absolute;
@@ -403,7 +378,7 @@ section { padding: 100px 48px; }
   z-index: -1;
 }
 
-/* ── SIGNATURE DISHES ── */
+/* SIGNATURE DISHES */
 .dishes-section {
   background: var(--espresso);
   position: relative;
@@ -467,36 +442,6 @@ section { padding: 100px 48px; }
   transition: opacity 0.4s;
 }
 
-.dish-placeholder {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.dish-placeholder-inner {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-  color: rgba(253,250,246,0.15);
-}
-
-.dish-placeholder-inner svg {
-  width: 40px; height: 40px;
-  stroke: currentColor;
-  fill: none;
-  stroke-width: 1;
-}
-
-.dish-placeholder-inner span {
-  font-size: 0.62rem;
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-}
-
-/* Different tones per card */
 .dish-card:nth-child(1) { background: #2A1810; }
 .dish-card:nth-child(2) { background: #1E1A14; }
 .dish-card:nth-child(3) { background: #251810; }
@@ -531,7 +476,7 @@ section { padding: 100px 48px; }
   color: var(--terra-soft);
 }
 
-/* ── PORTFOLIO ── */
+/* PORTFOLIO */
 .portfolio-section {
   background: var(--cream);
   max-width: 100%;
@@ -593,52 +538,12 @@ section { padding: 100px 48px; }
   color: var(--white);
 }
 
-.portfolio-placeholder {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.portfolio-placeholder-icon {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  color: rgba(92,74,58,0.25);
-}
-
-.portfolio-placeholder-icon svg {
-  width: 32px; height: 32px;
-  stroke: currentColor;
-  fill: none;
-  stroke-width: 1;
-}
-
-.portfolio-placeholder-icon span {
-  font-size: 0.58rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-/* ── SOCIAL ── */
+/* SOCIAL */
 .social-section {
   background: var(--white);
   text-align: center;
   padding: 80px 48px;
 }
-
-.social-handle {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(2rem, 6vw, 5rem);
-  font-weight: 300;
-  color: var(--espresso);
-  margin: 24px 0 8px;
-  letter-spacing: -0.02em;
-}
-
-.social-handle span { color: var(--terra); }
 
 .social-sub {
   font-size: 0.78rem;
@@ -671,7 +576,7 @@ section { padding: 100px 48px; }
   color: var(--white);
 }
 
-/* ── CONTACT ── */
+/* CONTACT */
 .contact-section {
   background: var(--espresso);
   position: relative;
@@ -746,7 +651,7 @@ section { padding: 100px 48px; }
   margin-bottom: 48px;
 }
 
-/* ── FOOTER ── */
+/* FOOTER */
 footer {
   background: #0E0806;
   padding: 24px 48px;
@@ -768,7 +673,7 @@ footer .foot-copy {
   color: rgba(253,250,246,0.2);
 }
 
-/* ── SCROLL REVEAL ── */
+/* SCROLL REVEAL */
 .reveal {
   opacity: 1;
   transform: translateY(0);
@@ -783,7 +688,7 @@ footer .foot-copy {
 .reveal-delay-3 { transition-delay: 0.3s; }
 .reveal-delay-4 { transition-delay: 0.4s; }
 
-/* ── ANIMATIONS ── */
+/* ANIMATIONS */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(24px); }
   to   { opacity: 1; transform: translateY(0); }
@@ -799,7 +704,7 @@ footer .foot-copy {
   50%       { opacity: 1;   transform: scaleY(1.15); }
 }
 
-/* ── RESPONSIVE ── */
+/* RESPONSIVE */
 @media (max-width: 900px) {
   nav { padding: 20px 24px; }
   nav.scrolled { padding: 14px 24px; }
@@ -828,7 +733,6 @@ footer .foot-copy {
 <body>
 
 <!-- NAV -->
-
 <nav id="nav">
   <a class="nav-logo" href="#">Chef Moni</a>
   <ul class="nav-links">
@@ -840,7 +744,6 @@ footer .foot-copy {
 </nav>
 
 <!-- HERO -->
-
 <section class="hero" id="home">
   <div class="hero-content">
     <p class="hero-eyebrow">Private Chef &nbsp;&middot;&nbsp; Ibadan, Nigeria &nbsp;&middot;&nbsp; Bites by Nobu</p>
@@ -858,7 +761,6 @@ footer .foot-copy {
 </section>
 
 <!-- ABOUT -->
-
 <section id="about" style="padding: 100px 48px;">
   <div class="about">
     <div class="about-text-col">
@@ -905,12 +807,10 @@ footer .foot-copy {
       </div>
       <div class="about-frame-accent"></div>
     </div>
-
   </div>
 </section>
 
 <!-- SIGNATURE DISHES -->
-
 <section class="dishes-section" id="dishes">
   <div class="dishes-inner">
     <div class="dishes-header">
@@ -965,52 +865,10 @@ footer .foot-copy {
         </div>
       </div>
     </div>
-      <div class="dish-card reveal reveal-delay-1">
-        
-        </div>
-        <div class="dish-info">
-          <p class="dish-name">Fine Dining Fried Rice</p>
-          <p class="dish-origin">Nigerian &nbsp;/&nbsp; Plated</p>
-        </div>
-      </div>
-      <div class="dish-card reveal reveal-delay-2">
-        
-        </div>
-        <div class="dish-info">
-          <p class="dish-name">Private Dinner Menu</p>
-          <p class="dish-origin">Intercontinental &nbsp;/&nbsp; Fine Dining</p>
-        </div>
-      </div>
-      <div class="dish-card reveal reveal-delay-1">
-        
-        </div>
-        <div class="dish-info">
-          <p class="dish-name">Pan-Asian Plates</p>
-          <p class="dish-origin">Asian Tradition</p>
-        </div>
-      </div>
-      <div class="dish-card reveal reveal-delay-2">
-        
-        </div>
-        <div class="dish-info">
-          <p class="dish-name">Private Dinner Menu</p>
-          <p class="dish-origin">Intercontinental</p>
-        </div>
-      </div>
-      <div class="dish-card reveal reveal-delay-3">
-        
-        </div>
-        <div class="dish-info">
-          <p class="dish-name">Event Catering Spread</p>
-          <p class="dish-origin">Multi-cuisine &nbsp;/&nbsp; 200 covers</p>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
 
 <!-- PORTFOLIO -->
-
 <section class="portfolio-section" id="portfolio">
   <div class="portfolio-inner">
     <div class="portfolio-intro">
@@ -1063,7 +921,6 @@ footer .foot-copy {
 </section>
 
 <!-- SOCIAL -->
-
 <section class="social-section">
   <span class="section-label reveal" style="display:block; text-align:center;">Find the Work</span>
   <div style="font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem, 7vw, 5.5rem); font-weight: 300; color: var(--espresso); letter-spacing: -0.02em; margin: 12px 0 6px;">
@@ -1077,7 +934,6 @@ footer .foot-copy {
 </section>
 
 <!-- CONTACT -->
-
 <section class="contact-section" id="contact">
   <div class="contact-inner">
     <span class="section-label reveal" style="color: var(--terra-soft); display: block; text-align: center;">Get in Touch</span>
@@ -1114,12 +970,33 @@ footer .foot-copy {
 </section>
 
 <!-- FOOTER -->
-
 <footer>
   <span class="foot-name">Chef Moni &nbsp;/&nbsp; Bites by Nobu</span>
   <span class="foot-copy">Ibadan, Nigeria &nbsp;&middot;&nbsp; &copy; 2026</span>
 </footer>
 
 <script>
-// Nav scroll
-const
+// Nav scroll effect
+const navEl = document.getElementById('nav');
+window.addEventListener('scroll', () => {
+  navEl.classList.toggle('scrolled', window.scrollY > 60);
+});
+
+// Custom cursor
+const cursor = document.createElement('div');
+cursor.className = 'cursor';
+const ring = document.createElement('div');
+ring.className = 'cursor-ring';
+document.body.appendChild(cursor);
+document.body.appendChild(ring);
+
+document.addEventListener('mousemove', e => {
+  cursor.style.left = e.clientX + 'px';
+  cursor.style.top  = e.clientY + 'px';
+  ring.style.left   = e.clientX + 'px';
+  ring.style.top    = e.clientY + 'px';
+});
+</script>
+
+</body>
+</html>
